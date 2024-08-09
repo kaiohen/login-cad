@@ -1,6 +1,4 @@
 # login-cad
-<<<<<<< HEAD
-=======
 
 ## Descrição
 O projeto tem como funcionalidade a criação de uma tabela de usuarios seja de uma loja ou empresa que deseja listar seus clientes, contem também uma tela de login onde é possivel logar para salvar a tabela criada.
@@ -21,4 +19,4 @@ O projeto tem como funcionalidade a criação de uma tabela de usuarios seja de 
 
  ## Como foi criado
    Utilizando *function* e *Array* foi possivel criar um codigo que verifica se o email digitado é valido ou invalido, e ao ser validado o utilizador sera redirecionado para uma tela de cadastro onde podera adicionar linhas a tabela, podendo editar e excluir as mesmas.
->>>>>>> a944a8fdcde40397508b4723d758fbdc2e549566
+
