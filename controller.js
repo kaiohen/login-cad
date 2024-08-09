@@ -11,12 +11,15 @@ function acessar() {
 }
 // função para armazenamento de nomes em array
 var dadosListas = [];
-function salvarUser() {
+function salvarUser()
+//  pega o valor digitado no input
   let nomeUser = document.getElementById("nomeUser").value;
+
   if (nomeUser) {
     dadosListas.push(nomeUser);
     console.log(dadosListas);
     criaLista();
+    // dexa o campo vazio para ser digitado novamente
     document.getElementById("nomeUser").value = "";
   } else {
     alert("Favor informe um nome para cadastro");

@@ -33,7 +33,34 @@ Para editar uma linha basta clicar no botão a baixo da coluna **ações** escri
 
  Utilizando *function* e *if/else* foi possivel criar um codigo que verifica se o email digitado é valido ou invalido, pegando os elementos do html com "id" (*document.getElementById*) e seu valor (*.value*) e passando pelo *if e else* que se o email for invalido aparecera uma mensagem alertando, e caso for validado sera direcionado para a pagina de cadastro.
  
+ ~~~JavaScript
+ function salvarUser() {
+  let nomeUser = document.getElementById("nomeUser").value;
+  if (nomeUser) {
+    dadosListas.push(nomeUser);
+    console.log(dadosListas);
+    criaLista();
+    document.getElementById("nomeUser").value = "";
+  } else {
+    alert("Favor informe um nome para cadastro");
+  }
+}
+~~~
  
- 
-  e ao ser validado o utilizador sera redirecionado para uma tela de cadastro onde podera adicionar linhas a tabela, podendo editar e excluir as mesmas.
+ Pegando o valor (*.value*) digitado se estiver vazio passa pelo (*if/else*) e volta em forma de alerta (*alert*) avisando para informar um nome ao enviar e deixa o campo vazio para ser digitado.
+
+~~~ JavaScript
+function criaLista() {
+  let tabela = (document.getElementById("tabela").innerHTML =
+    "<tr><th>Nome Usúario</th><th>Ações</th></tr>");
+  for (let i = 0; i <= dadosListas.length - 1; i++) {
+    tabela +=
+      "<tr><td>" +
+      dadosListas[i] +
+      "</td><td><button type='button' onclick='editar(parentNode.parentNode.rowIndex)' class='btn btn-dark'>Editar</button><button type='button' onclick='excluir(parentNode.parentNode.rowIndex)' class='btn btn-dark'>excluir</button></td></tr>";
+    document.getElementById("tabela").innerHTML = tabela;
+  }
+}
+~~~
+
 
