@@ -33,3 +33,9 @@ function salvarUser() {
     document.getElementById("tabela").innerHTML = tabela;
  }
 }
+// função edição nome da lista
+ function editar(i) {
+  document.getElementById("nomeUser").value = dadosListas[i - 1];
+  dadosListas.splice(dadosListas[i - 1], 1);
+}
+
