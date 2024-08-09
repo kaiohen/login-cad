@@ -12,33 +12,37 @@ function acessar() {
 // função para armazenamento de nomes em array
 var dadosListas = [];
 function salvarUser() {
-   let nomeUser = document.getElementById("nomeUser").value;
-   if (nomeUser) {
-        dadosListas.push(nomeUser);     
-        console.log(dadosListas);
-        criaLista();
-        document.getElementById("nomeUser").value = "";
-    } else {
-  alert("Favor informe um nome para cadastro");
- }
- }
+  let nomeUser = document.getElementById("nomeUser").value;
+  if (nomeUser) {
+    dadosListas.push(nomeUser);
+    console.log(dadosListas);
+    criaLista();
+    document.getElementById("nomeUser").value = "";
+  } else {
+    alert("Favor informe um nome para cadastro");
+  }
+}
 //  função para criar listas de usuario
- function criaLista() {
+function criaLista() {
   //  pega o id da tabela no html
-  let tabela = (document.getElementById("tabela").innerHTML = "<tr><th>Nome Usúario</th><th>Ações</th></tr>");
+  let tabela = (document.getElementById("tabela").innerHTML =
+    "<tr><th>Nome Usúario</th><th>Ações</th></tr>");
   // pega o valor do id nomeUser e cria uma coluna na tabela
   for (let i = 0; i <= dadosListas.length - 1; i++) {
-    tabela += "<tr><td>" + dadosListas[i] + "</td><td><button type='button' onclick='editar(parentNode.parentNode.rowIndex)' class='btn btn-dark'>Editar</button><button type='button' onclick='excluir(parentNode.parentNode.rowIndex)' class='btn btn-dark'>excluir</button></td></tr>";
+    tabela +=
+      "<tr><td>" +
+      dadosListas[i] +
+      "</td><td><button type='button' onclick='editar(parentNode.parentNode.rowIndex)' class='btn btn-dark'>Editar</button><button type='button' onclick='excluir(parentNode.parentNode.rowIndex)' class='btn btn-dark'>excluir</button></td></tr>";
     document.getElementById("tabela").innerHTML = tabela;
- }
+  }
 }
 // função edição nome da lista
- function editar(i) {
+function editar(i) {
   document.getElementById("nomeUser").value = dadosListas[i - 1];
   dadosListas.splice(dadosListas[i - 1], 1);
 }
 // funcao para excluir nome das lista
- function excluir(i) {
+function excluir(i) {
   dadosListas.splice((i - 1), 1);
   document.getElementById("tabela").deleteRow(i);
 }

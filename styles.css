@@ -6,6 +6,9 @@ body{
     background-position: center; 
     
 }
+h3{
+    text-align: center;
+}
 #login {
     display: flex;
     justify-content: center;
