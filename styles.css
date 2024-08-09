@@ -1,12 +1,24 @@
 body{
-    background-color: black;
+    height: 100vh;
+    background-image: url(wallpaper.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
 }
-login {
-    align-items: center;
-    position: absolute;
+#login {
     display: flex;
-    margin: 100%;
-    padding: 100%;
-    border: 5px solid red;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50vh;
 }
+#tabela {
+    box-sizing: content-box;
+    border: 2px solid rgb(226, 108, 108);
+    width:  100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
