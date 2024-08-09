@@ -9,3 +9,17 @@ function acessar() {
     window.location.href = "cadastro.html";
   }
 }
+
+// função para armazenamento de nomes em array
+var dadosListas = [];
+function salvarUser() {
+   let nomeUser = document.getElementById("nomeUser").value;
+   if (nomeUser) {
+        dadosListas.push(nomeUser);     
+        console.log(dadosListas);
+        criaLista();
+        document.getElementById("nomeUser").value = "";
+    } else {
+  alert("Favor informe um nome para cadastro");
+ }
+ }
