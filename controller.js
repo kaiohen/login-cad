@@ -9,7 +9,6 @@ function acessar() {
     window.location.href = "cadastro.html";
   }
 }
-
 // função para armazenamento de nomes em array
 var dadosListas = [];
 function salvarUser() {
@@ -38,4 +37,8 @@ function salvarUser() {
   document.getElementById("nomeUser").value = dadosListas[i - 1];
   dadosListas.splice(dadosListas[i - 1], 1);
 }
-
+// funcao para excluir nome das lista
+ function excluir(i) {
+  dadosListas.splice((i - 1), 1);
+  document.getElementById("tabela").deleteRow(i);
+}
