@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+}
+login {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    margin: 100%;
+    padding: 100%;
+    border: 5px solid red;
+    box-sizing: border-box;
+}

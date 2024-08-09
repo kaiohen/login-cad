@@ -11,11 +11,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container col-4">
-      <h3>Login</h3>
+    <div id="login" class="container">
       <form action="" class="form-control">
+      <h3>Login</h3>
+      
         <input
           type="text"
           name=""
@@ -23,7 +25,7 @@
           class="form-control"
           placeholder="Informe o e-mail"
         />
-        <br>
+        <br />
         <input
           type="password"
           id="loginSenha"
@@ -31,7 +33,9 @@
           placeholder="Informe a senha"
         />
         <br />
-        <button type="button" onclick="acessar()"class="btn btn-warning">ACESSAR</button>
+        <button type="button" onclick="acessar()" class="btn btn-warning">
+          ACESSAR
+        </button>
       </form>
     </div>
     <script src="controller.js"></script>
