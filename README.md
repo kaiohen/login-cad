@@ -38,7 +38,7 @@ Para editar uma linha basta clicar no botão a baixo da coluna **ações** escri
   let nomeUser = document.getElementById("nomeUser").value;
   if (nomeUser) {
     dadosListas.push(nomeUser);
-    console.log(dadosListas);
+    // console.log(dadosListas);
     criaLista();
     document.getElementById("nomeUser").value = "";
   } else {
@@ -47,7 +47,7 @@ Para editar uma linha basta clicar no botão a baixo da coluna **ações** escri
 }
 ~~~
  
- Pegando o valor (*.value*) digitado se estiver vazio passa pelo (*if/else*) e volta em forma de alerta (*alert*) avisando para informar um nome ao enviar e deixa o campo vazio para ser digitado.
+ Pega o que digitado no *input* e adiciona ao *array* (*push*) e com a função *crialista()* cria uma linha na tabela com o nome digitado, se nada for digitado sera avisado em forma de alerta (*alert*), avisando para informar um nome ao enviar.
 
 ~~~ JavaScript
 function criaLista() {
@@ -62,5 +62,27 @@ function criaLista() {
   }
 }
 ~~~
+ Esta função esta pegando o conteúdo do HTML com o *id* "tabela"(*innerHTML*) e o *Array* e cria uma nova linha na tabela utilizando *<tr>* e *<td>* com os valores da variavel (*var*) *dadosListas* e fazendo uma adição de dois botões, que  permitem excluir e editar os nomes.
+
+~~~JavaScript
+ function editar(i) {
+  document.getElementById("nomeUser").value = dadosListas[i - 1];
+  dadosListas.splice(dadosListas[i - 1], 1);
+}
+~~~
+ Esta função esta fazendo o botão de edição ser funcional com a utilização do metodo *splice* que permite alterar ou remover elementos de um *array* pela sua posição.
+
+~~~JavaScript
+function excluir(i) {
+  dadosListas.splice((i - 1), 1);
+  document.getElementById("tabela").deleteRow(i);
+}
+~~~
+ Permite excluir uma linha da tabela (*deleteRow()*) e também apaga a posição do *Array* correspondente a linha.
 
 
+ ## Imagens do projeto
+
+![image](https://github.com/user-attachments/assets/83785694-2546-4c29-99b6-38f5178ac917)
+
+![image](https://github.com/user-attachments/assets/8a09d4de-247c-4768-8825-bec9c56f3054)
