@@ -50,10 +50,13 @@ function criaLista() {
 // função edição nome da lista
 function editar(i) {
   document.getElementById("nomeUser").value = dadosListas[i - 1];
+  document.getElementById("EmailUser").value = dadosListasEmail[i - 1];
   dadosListas.splice(dadosListas[i - 1], 1);
+  dadosListasEmail.splice(dadosListasEmail[i - 1], 1);
 }
 // funcao para excluir nome das lista
 function excluir(i) {
   dadosListas.splice((i - 1), 1);
+  dadosListasEmail.splice((i - 1), 1);
   document.getElementById("tabela").deleteRow(i);
 }
