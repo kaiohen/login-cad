@@ -1,12 +1,25 @@
 // função para validação de acesso
-function acessar() {
-  let loginEmail = document.getElementById("loginEmail").value;
+function checarEmail() {
+  // verifica se o campo de senha esta vazio 
   let loginSenha = document.getElementById("loginSenha").value;
-  if (!loginEmail || !loginSenha) {
+  if (!loginSenha) {
     alert("Favor preencher todos os campos");
+    return false;
+  }
+  // verifica se o email é válido
+  // ---------------------------------
+  if (
+    document.forms[0].email.value == "" ||
+    document.forms[0].email.value.indexOf("@") == -1 ||
+    document.forms[0].email.value.indexOf(".") == -1
+    // ----------------------------
+  ) {
+    // se for inválido retorna um alerta
+    alert("Por favor, informe um Email válido");
   } else {
-    // alert("Campos preenchidos com sucesso");
-    window.location.href = "cadastro.html";
+  // se for válido redireciona para a tela de cadastro
+    window.location.href = ("cadastro.html")
+    return true;
   }
 }
 var dadosListas = [];
@@ -26,7 +39,7 @@ function salvarUser() {
   }
   //  pega o valor digitado no input
  let EmailUser = document.getElementById("EmailUser").value;
- if (EmailUser && checarEmail()) {
+ if (EmailUser && EmailCad()) {
    dadosListasEmail.push(EmailUser);
    console.log(dadosListasEmail);
    criaLista();
@@ -39,7 +52,7 @@ function salvarUser() {
  }
 }
 // validação do email no cadastro de usuario
-function checarEmail() {
+function EmailCad() {
   let email = document.getElementById("EmailUser").value;
   // verifica se oque foi digitado é um email
   if (email == "" || email.indexOf("@") == -1 || email.indexOf(".") == -1) {
