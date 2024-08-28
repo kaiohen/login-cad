@@ -134,5 +134,5 @@ function excluir(i) {
 
 ![image](https://github.com/user-attachments/assets/83785694-2546-4c29-99b6-38f5178ac917)
 
-![image](![image](https://github.com/user-attachments/assets/c40d8293-ba52-4401-980c-e151d59f5d1c)
+![image](https://github.com/user-attachments/assets/c40d8293-ba52-4401-980c-e151d59f5d1c)
 
