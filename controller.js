@@ -47,7 +47,6 @@ function salvarUser() {
    document.getElementById("EmailUser").value = "";
  } else {
    // Se o email for inválido ou vazio, remove o email adicionado
-       dadosListasEmail.pop();
     alert("Email inválido.");
  }
 }
